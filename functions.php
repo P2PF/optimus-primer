@@ -1,13 +1,41 @@
 <?php
-// put custom code here
 
-// Add comments to Projects
+global $number;
+$number = "";
 
-//add_filter('projectposttype_args', 'custom_filter_project_args');
-//
-//function custom_filter_project_args($args) {
-//	if (isset($args['supports'])) {
-//		$args['supports'][] = 'comments';
-//	}
-//	return $args;
-//}
+add_action('wp_enqueue_scripts', 'brunch_scripts', 100);
+add_filter('the_title', 'number_styling', 10, 2);
+add_filter('body_class', 'number_body_class');
+
+function brunch_scripts()
+{
+    $uri = get_stylesheet_directory_uri() . '/public';
+    wp_enqueue_style('brunch_css', $uri . '/css/app.css', false, null);
+    wp_enqueue_script('brunch_js_vendor', $uri . '/js/vendor.js', array('jquery'), null, true);
+    wp_enqueue_script('brunch_js_app', $uri . '/js/app.js', array('jquery'), null, true);
+}
+
+function number_styling($title, $id = null)
+{
+    global $number;
+    if (preg_match('/^([0-9\.]+)\s(.*)$/', $title, $matches)) {
+        $title = '<span class="number">' . $matches[1] . '</span> ' . $matches[2];
+        $number = $matches[1];
+    }
+    return $title;
+}
+
+function number_body_class($classes) {
+    global $number;
+    $add = array();
+    $title = the_title('','',false); // force loading the title to set $number
+    if($number) {
+        array_push($add,"page-number");
+        $stack = array();
+        foreach (explode('.', $number) as $comp) {
+            array_push($stack, $comp);
+            array_push($add, "page-number-" . implode(".", $stack));
+        }
+    }
+    return array_merge($classes, $add);
+}

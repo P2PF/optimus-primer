@@ -1,0 +1,19 @@
+// Global variables
+
+$COLOR1: #F4945C;
+$COLOR2: #F8AD9D;
+$COLOR3: #3AA59C;
+$COLOR4: #B9D0D3;
+
+$COLOR1_1: lighten($COLOR1,40%);
+$COLOR1_2: lighten($COLOR1,20%);
+$COLOR1_3: darken($COLOR1,20%);
+$COLOR1_4: darken($COLOR1,40%);
+
+
+
+.section1 {
+  .header {
+    background-color: $COLOR1;
+  }
+}
