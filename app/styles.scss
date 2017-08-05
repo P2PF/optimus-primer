@@ -1,45 +1,158 @@
 @import "variables";
 @import "fonts";
 
-h1 {
+.cbp-container {
+  max-width: auto;
 }
 
-.section1 {
-  .header {
-    background-color: $COLOR1;
+.wh-page-title-bar {
+  h1.page-title {
+    color: #ffffff;
+    font-size: 64px;
+    line-height: 75px;
+    font-family: "Roboto-Black";
+    border-bottom: 3px solid #FFFFFF;
+    span.number {
+      font-size: 100px;
+    }
   }
-}
-
-h1.page-title span.number {
-  font-size: 2.0em;
 }
 
 .page-number-1 {
   .wh-page-title-bar {
-    background-color: $COLOR1;
+    background-color: $COLOR4;
   }
-  h1.page-title {
-    color: #ffffff;
-    font-family: "Roboto-Light";
-    span.number {
-      font-family: "Roboto-Black";
-    }
-  }
+}
+
+.bg-color1 {
+  background-color: $COLOR1;
+  padding: 16px;
 }
 
 .page-grid {
   clear: both;
   .grid-block {
-    width: 33%;
+    color: #fff;
+    width: 33.33%;
     float: left;
-    min-height: 320px;
-    background-color: $COLOR1;
-    padding: 20px;
   }
   .grid-block-base {
+    background-color: $COLOR1;
+    min-height: 480px;
+    margin: 12px;
+    vertical-align: bottom;
+    position: relative;
+    h2 {
+      @include grid-title;
+      left: 0;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      border-bottom: 3px solid #FFFFFF;
+      margin: 30px;
+      padding-bottom: 16px;
+      .number {
+        display: block;
+        font-size: 100px;
+        line-height: 100px;
+        font-weight: 900;
+      }
+    }
   }
   .grid-block-hover {
     display: none;
+    width: 100%;
+    height: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    .btn {
+      @include default-font;
+      width: 50%;
+      display: block;
+      margin: 200px auto;
+      background-color: orange;
+      color: #ffffff;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
   }
+}
+
+div.page-grid div.grid-block:nth-child(9n+2) .grid-block-base {
+  background-color: #EEB982;
+}
+
+div.page-grid div.grid-block:nth-child(9n+4) .grid-block-base {
+  background-color: $COLOR4;
+}
+
+div.page-grid div.grid-block:nth-child(9n+6) .grid-block-base {
+  background-color: #44A59C;
+}
+
+div.page-grid div.grid-block:nth-child(9n+7) .grid-block-base {
+  background-color: #39847B;
+}
+
+div.page-grid div.grid-block:nth-child(9n+1) .grid-block-base {
+  background-color: #E49748;
+}
+
+div.page-grid div.grid-block:nth-child(9n+3) .grid-block-base {
+  background-color: #D88C76;
+}
+
+div.page-grid div.grid-block:nth-child(9n+5) .grid-block-base {
+  background-color: #D07F42;
+}
+
+div.page-grid div.grid-block:nth-child(9n+7) .grid-block-base {
+  background-color: #66A1A9;
+}
+
+/*
+.grid-block:nth-child(3n) {
+  background-color: $COLOR1;
+}
+
+.grid-block:nth-child(3n+1) {
+  background-color: $COLOR2;
+}
+
+.grid-block:nth-child(3n+2) {
+  background-color: $COLOR3;
+}
+
+.grid-block:nth-child(3n+3) {
+  background-color: $COLOR4;
+}
+*/
+@media screen and (min-width: 521px) and (max-width: 768px) {
+  .page-grid {
+    .grid-block {
+      width: 50%;
+      .grid-block-base {
+        min-height: 320px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .page-grid {
+    .grid-block {
+      width: 100%;
+      .grid-block-base {
+        min-height: 240px;
+      }
+    }
+  }
+}
+
+.idx .one {
+  background-color: #dddddd;
 }

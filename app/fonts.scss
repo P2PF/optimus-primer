@@ -2,3 +2,21 @@
 
 $roboto-font-path: "../fonts" !default;
 @import "roboto-fontface";
+
+$FONT-STACK: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+$bold: "Roboto-Bold";
+$light: "Roboto-Light";
+
+/* font mixins */
+
+@mixin default-font {
+  font-family: $FONT-STACK;
+}
+
+@mixin grid-title {
+  font-family: $FONT-STACK;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #FFFFFF;
+}

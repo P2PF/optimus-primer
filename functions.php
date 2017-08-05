@@ -8,7 +8,7 @@ add_filter('body_class', 'number_body_class');
 function brunch_scripts()
 {
     $uri = get_stylesheet_directory_uri() . '/public';
-    wp_enqueue_style('brunch_css', $uri . '/css/app.css', false, null);
+    wp_enqueue_style('optimus_primer', $uri . '/css/app.css', array('petal-style','petal_options_style'), null);
     wp_enqueue_script('brunch_js_vendor', $uri . '/js/vendor.js', array('jquery'), null, true);
     wp_enqueue_script('brunch_js_app', $uri . '/js/app.js', array('jquery'), null, true);
 }
