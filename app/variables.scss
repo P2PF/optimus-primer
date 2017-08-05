@@ -9,11 +9,3 @@ $COLOR1_1: lighten($COLOR1,40%);
 $COLOR1_2: lighten($COLOR1,20%);
 $COLOR1_3: darken($COLOR1,20%);
 $COLOR1_4: darken($COLOR1,40%);
-
-
-
-.section1 {
-  .header {
-    background-color: $COLOR1;
-  }
-}
