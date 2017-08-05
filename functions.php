@@ -1,7 +1,5 @@
 <?php
 
-global $number;
-$number = "";
 
 add_action('wp_enqueue_scripts', 'brunch_scripts', 100);
 add_filter('the_title', 'number_styling', 10, 2);
@@ -17,24 +15,26 @@ function brunch_scripts()
 
 function number_styling($title, $id = null)
 {
-    global $number;
-    if (preg_match('/^([0-9\.]+)\s(.*)$/', $title, $matches)) {
-        $title = '<span class="number">' . $matches[1] . '</span> ' . $matches[2];
-        $number = $matches[1];
+    if(!is_admin()) {
+        if (preg_match('/^([0-9\.]+)\s(.*)$/', $title, $matches)) {
+            $title = '<span class="number">' . $matches[1] . '</span> ' . $matches[2];
+        }
     }
     return $title;
 }
 
 function number_body_class($classes) {
-    global $number;
     $add = array();
-    $title = the_title('','',false); // force loading the title to set $number
-    if($number) {
-        array_push($add,"page-number");
-        $stack = array();
-        foreach (explode('.', $number) as $comp) {
-            array_push($stack, $comp);
-            array_push($add, "page-number-" . implode(".", $stack));
+    $title = the_title_attribute(array('echo'=>false));
+    if (preg_match('/^([0-9\.]+)\s(.*)$/', $title , $matches)) {
+        $number = $matches[1];
+        if ($number) {
+            array_push($add, "page-number");
+            $stack = array();
+            foreach (explode('.', $number) as $comp) {
+                array_push($stack, $comp);
+                array_push($add, "page-number-" . implode(".", $stack));
+            }
         }
     }
     return array_merge($classes, $add);
