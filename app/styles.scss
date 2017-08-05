@@ -1,9 +1,9 @@
 @import "variables";
 @import "fonts";
 
-
 h1 {
 }
+
 .section1 {
   .header {
     background-color: $COLOR1;
@@ -13,6 +13,7 @@ h1 {
 h1.page-title span.number {
   font-size: 2.0em;
 }
+
 .page-number-1 {
   .wh-page-title-bar {
     background-color: $COLOR1;
@@ -23,5 +24,22 @@ h1.page-title span.number {
     span.number {
       font-family: "Roboto-Black";
     }
+  }
+}
+
+.page-grid {
+  clear: both;
+  .grid-block {
+    width: 33%;
+    float: left;
+    min-height: 320px;
+    background-color: $COLOR1;
+    padding: 20px;
+  }
+  .grid-block-base {
+  }
+  .grid-block-hover {
+    display: none;
+    position: absolute;
   }
 }
