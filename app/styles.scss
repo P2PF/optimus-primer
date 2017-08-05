@@ -1,2 +1,27 @@
 @import "variables";
 @import "fonts";
+
+
+h1 {
+}
+.section1 {
+  .header {
+    background-color: $COLOR1;
+  }
+}
+
+h1.page-title span.number {
+  font-size: 2.0em;
+}
+.page-number-1 {
+  .wh-page-title-bar {
+    background-color: $COLOR1;
+  }
+  h1.page-title {
+    color: #ffffff;
+    font-family: "Roboto-Light";
+    span.number {
+      font-family: "Roboto-Black";
+    }
+  }
+}
