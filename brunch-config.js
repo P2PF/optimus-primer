@@ -46,6 +46,7 @@ exports.plugins = {
 exports.npm = {
     styles: {
         "pace-progress": ['themes/blue/pace-theme-minimal.css'],
+        "animate.css": ['animate.css'],
         "aos": ['dist/aos.css']
     },
     globals: {

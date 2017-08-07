@@ -64,13 +64,7 @@ get_header();
     </div>
 </div>
 <script>
-    var $ = jQuery;
-    $(function () {
-        $('.grid-block').on('mouseenter', function (e) {
-            $(this).find('.grid-block-hover').fadeIn();
-        }).on('mouseleave', function (e) {
-            $(this).find('.grid-block-hover').fadeOut();
-        })
+    jQuery(function () {
     });
 </script>
 <?php get_footer(); ?>
