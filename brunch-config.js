@@ -35,7 +35,11 @@ exports.plugins = {
     copycat: {
         fonts: [
             "app/assets/fonts/",
-            "node_modules/roboto-fontface/fonts/"
+            "node_modules/roboto-fontface/fonts/",
+
+        ],
+        'fonts/noticia-text': [
+            "node_modules/typeface-noticia-text/files/"
         ],
         img: ["app/assets/img/"],
         verbose: true,

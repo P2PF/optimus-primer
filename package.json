@@ -18,7 +18,8 @@
     "aos": "^2.2.0",
     "masonry-layout": "^4.2.0",
     "pace-progress": "^1.0.2",
-    "roboto-fontface": "^0.8.0"
+    "roboto-fontface": "^0.8.0",
+    "typeface-noticia-text": "0.0.31"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
