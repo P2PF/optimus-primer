@@ -29,7 +29,6 @@ get_header();
                 $child_query = new WP_Query($args);
                 ?>
                 <?php while ($child_query->have_posts()) : $child_query->the_post(); ?>
-                    <?php for ($i = 0; $i < 4; ++$i) { ?>
                         <div class="page-entry">
                             <a href="<?php the_permalink(); ?>" rel="bookmark"
                                title="<?php the_title_attribute(); ?>" class="">
@@ -38,9 +37,6 @@ get_header();
                             </a>
                             <hr>
                         </div>
-                    <?php } ?>
-
-
                 <?php endwhile; ?>
 
                 <?php

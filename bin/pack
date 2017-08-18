@@ -1,0 +1,20 @@
+#!/bin/bash
+THEME=optimus-primer
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+DEST=tmp/$THEME/
+RSYNC="rsync"
+VERSION=`egrep '^\s*Version:' style.css |awk '{print $2}'`
+if [ "x$VERSION" = "x" ]; then
+  echo "Can't determine version from style.css"
+  exit 1
+fi
+pushd $DIR/..
+mkdir -p $DEST
+rsync -lptgoDPc --exclude "*.yarn" --exclude "*.js" ./* $DEST
+for dir in public; do
+  $RSYNC -aPCc --delete $dir/ $DEST/$dir/
+done
+cd tmp
+zip -9r $THEME-$VERSION.zip $THEME/
+popd
+echo "Packed tmp/$THEME-$VERSION.zip"

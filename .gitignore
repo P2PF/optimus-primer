@@ -25,5 +25,8 @@ node_modules/
 # Brunch output folder.
 public/
 
+# temp dir
+tmp/
+
 # yarn
 yarn.lock

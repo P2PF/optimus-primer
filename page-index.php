@@ -30,32 +30,39 @@ get_header();
                 ?>
 
                 <?php while ($child_query->have_posts()) : $child_query->the_post(); ?>
-                    <?php for ($i = 0; $i < 4; ++$i) { ?>
-                        <a href="<?php the_permalink(); ?>" rel="bookmark"
-                           title="<?php the_title_attribute(); ?>" class="">
-                            <!-- alternatively:  one third two-up-small-tablet one-up-mobile -->
-                            <div <?php post_class("grid-block"); ?>>
-                                <div class="grid-block-base">
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('page-thumb-mine');
-                                    }
-                                    ?>
-                                    <h2><?php the_title(); ?></h2>
-                                    <a href="<?php the_permalink(); ?>">
-                                        <div class="grid-block-hover">
-                                            <span class="btn">Read more</span>
-                                        </div>
-                                    </a>
-                                </div>
+                    <a href="<?php the_permalink(); ?>" rel="bookmark"
+                       title="<?php the_title_attribute(); ?>" class="">
+                        <!-- alternatively:  one third two-up-small-tablet one-up-mobile -->
+                        <div <?php post_class("grid-block"); ?>>
+                            <div class="grid-block-base">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('page-thumb-mine');
+                                }
+                                ?>
+                                <h2><?php the_title(); ?></h2>
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="grid-block-hover">
+                                        <span class="btn">Read more</span>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    <?php } ?>
-
-
+                        </div>
+                    </a>
                 <?php endwhile; ?>
 
-                <?php
+                <a href="/2-long-articles" rel="bookmark" class="">
+                    <!-- alternatively:  one third two-up-small-tablet one-up-mobile -->
+                    <div class="grid-block next">
+                        <div class="grid-block-base">
+                            <h2>Next: long articles</h2>
+                        </div>
+                    </div>
+
+                </a>
+
+
+                    <?php
                 wp_reset_postdata();
                 ?>
 
