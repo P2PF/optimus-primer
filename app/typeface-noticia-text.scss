@@ -1,6 +1,6 @@
 // Modified from node_modules/typeface-noticia-text/index.css to factor out $font-path
 
-$noticia-font-path: '../../../fonts' !default;
+$noticia-font-path: "../fonts/noticia-text" !default;
 
 /* noticia-text-400normal - latin */
 @font-face {

@@ -1,5 +1,6 @@
 @import "variables";
 @import "fonts";
+@import "mixins";
 
 .cbp-container {
   max-width: auto;
@@ -15,6 +16,10 @@
     line-height: 75px;
     font-family: "Roboto-Black";
     border-bottom: 3px solid #FFFFFF;
+    @include mobile {
+      font-size: 36px;
+      line-height: 48px;
+    }
     span.number {
       font-size: 100px;
     }
@@ -151,6 +156,15 @@
   }
 }
 
+.page-number {
+  .entry-content {
+    color: #4A4A4A;
+    font-family: "Noticia Text";
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
 .page-number-2 {
   .wh-page-title-bar {
     background-color: $COLOR5;
@@ -220,12 +234,20 @@
     background: url("../img/arrow-left.png") $COLOR1 2.5% 50% no-repeat;
     width: 50%;
     float: left;
+    @include mobile {
+      width: 100%;
+      padding-left: 48px;
+    }
   }
   .next {
     padding-right: 5%;
     background: url("../img/arrow-right.png") $COLOR2 97.5% 50% no-repeat;
     width: 50%;
     float: left;
+    @include mobile {
+      width: 100%;
+      padding-right: 48px;
+    }
   }
   &::after {
     clear: both;
@@ -260,4 +282,23 @@
 
 .idx .one {
   background-color: #dddddd;
+}
+
+
+footer {
+  border-top: 2px solid #ddd;
+  padding: 22px 48px 48px 48px;
+  margin-top: 48px;
+  @include mobile {
+    padding: 8px;
+  }
+  img {
+    margin-bottom: 16px;
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  img#heinrich {
+    margin-right: 28px;
+  }
 }

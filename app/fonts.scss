@@ -2,7 +2,7 @@
 
 $roboto-font-path: "../fonts" !default;
 @import "roboto-fontface";
-$noticia-font-path: "../fonts/noticia-text" !default;
+$noticia-font-path: "../fonts/noticia-text";
 @import "typeface-noticia-text";
 
 $FONT-STACK: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
