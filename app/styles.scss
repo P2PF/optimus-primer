@@ -49,6 +49,10 @@
       margin: 12px;
       vertical-align: bottom;
       position: relative;
+      overflow: hidden;
+      img {
+        transition: all 2s ease-out 0s;
+      }
       h2 {
         @include grid-title;
         left: 0;
@@ -81,15 +85,21 @@
         width: 50%;
         display: block;
         margin: 200px auto;
+        padding: 8px;
         background-color: orange;
         color: #ffffff;
         border-radius: 8px;
         text-align: center;
+        text-transform: uppercase;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
       }
 
     }
     .grid-block-base:hover {
+      img {
+        transform: scale(1.1);
+        transition: all 5s ease-out 0s;
+      }
       .grid-block-hover {
         opacity: 1.0;
         top: 0;
@@ -186,7 +196,7 @@
 }
 
 .nav-links {
-  clear:both;
+  clear: both;
   h2 {
     color: #ffffff;
     margin: 0;
@@ -206,12 +216,14 @@
     font-size: 20px;
   }
   .prev {
-    background-color: $COLOR1;
+    padding-left: 5%;
+    background: url("../img/arrow-left.png") $COLOR1 2.5% 50% no-repeat;
     width: 50%;
-    float:left;
+    float: left;
   }
   .next {
-    background-color: $COLOR2;
+    padding-right: 5%;
+    background: url("../img/arrow-right.png") $COLOR2 97.5% 50% no-repeat;
     width: 50%;
     float: left;
   }
