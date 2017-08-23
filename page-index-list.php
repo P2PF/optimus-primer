@@ -47,23 +47,27 @@ get_header();
         </div>
     </div>
     <div class="nav-links">
-        <div class="prev">
-            <?php
-            $next_post = get_previous_post();
-            if (!empty($next_post)): ?>
-                <a href="<?php echo get_permalink($next_post->ID); ?>"><h2>Previous section</h2>
-                    <?php echo $next_post->post_title; ?></a>
-            <?php endif; ?>
+        <?php
+        $next_post = get_previous_post();
+        if (!empty($next_post)): ?>
+            <a href="<?php echo get_permalink($next_post->ID); ?>">
+                <div class="prev">
+                    <h2>Previous article</h2>
+                    <?php echo $next_post->post_title; ?>
 
-        </div>
-        <div class="next">
-            <?php
-            $next_post = get_next_post();
-            if (!empty($next_post)): ?>
-                <a href="<?php echo get_permalink($next_post->ID); ?>"><h2>Next section</h2>
-                    <?php echo $next_post->post_title; ?></a>
-            <?php endif; ?>
-        </div>
+                </div>
+            </a>
+        <?php endif; ?>
+        <?php
+        $next_post = get_next_post();
+        if (!empty($next_post)): ?>
+            <a href="<?php echo get_permalink($next_post->ID); ?>">
+                <div class="next">
+                    <h2>Next article</h2>
+                    <?php echo $next_post->post_title; ?>
+                </div>
+            </a>
+        <?php endif; ?>
     </div>
 </div>
 <script>
