@@ -30,10 +30,9 @@ get_header();
                 ?>
 
                 <?php while ($child_query->have_posts()) : $child_query->the_post(); ?>
-                    <a href="<?php the_permalink(); ?>" rel="bookmark"
-                       title="<?php the_title_attribute(); ?>" class="">
-                        <!-- alternatively:  one third two-up-small-tablet one-up-mobile -->
-                        <div <?php post_class("grid-block"); ?>>
+                    <div <?php post_class("grid-block"); ?>>
+                        <a href="<?php the_permalink(); ?>" rel="bookmark"
+                           title="<?php the_title_attribute(); ?>" class="">
                             <div class="grid-block-base">
                                 <?php
                                 if (has_post_thumbnail()) {
@@ -47,8 +46,8 @@ get_header();
                                     </div>
                                 </a>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 <?php endwhile; ?>
 
                 <a href="/2-long-articles" rel="bookmark" class="">
@@ -62,7 +61,7 @@ get_header();
                 </a>
 
 
-                    <?php
+                <?php
                 wp_reset_postdata();
                 ?>
 
