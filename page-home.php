@@ -7,9 +7,10 @@
  */
 get_header();
 function first_word($str) {
-    $arr=explode(" ",$str);
+    $arr = explode(" ", $str);
     print $arr[0];
 }
+
 $img = get_stylesheet_directory_uri() . '/public/img';
 ?>
 <div id="front">
@@ -32,17 +33,16 @@ $img = get_stylesheet_directory_uri() . '/public/img';
     ?>
 
     <?php while ($child_query->have_posts()) : $child_query->the_post(); ?>
-        <a href="<?php the_permalink(); ?>" rel="bookmark"
-           title="<?php the_title_attribute(); ?>" class="">
-            <!-- alternatively:  one third two-up-small-tablet one-up-mobile -->
-            <div <?php post_class("grid-block"); ?>>
+        <div <?php post_class("grid-block"); ?>>
+            <a href="<?php the_permalink(); ?>" rel="bookmark"
+               title="<?php the_title_attribute(); ?>" class="">
                 <div class="grid-block-base">
                     <?php
                     if (has_post_thumbnail()) {
                         the_post_thumbnail('page-thumb-mine');
                     }
                     ?>
-                    <h2><?php print the_title("","",false); ?></h2>
+                    <h2><?php print the_title("", "", false); ?></h2>
                     <a href="<?php the_permalink(); ?>">
                         <div class="grid-block-hover">
                             <div class="excerpt">
@@ -52,8 +52,8 @@ $img = get_stylesheet_directory_uri() . '/public/img';
                         </div>
                     </a>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     <?php endwhile; ?>
 
     <?php
