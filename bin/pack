@@ -8,6 +8,7 @@ if [ "x$VERSION" = "x" ]; then
   echo "Can't determine version from style.css"
   exit 1
 fi
+brunch build --debug --production
 pushd $DIR/..
 mkdir -p $DEST
 rsync -lptgoDPc --exclude "*.yarn" --exclude "*.js" ./* $DEST
