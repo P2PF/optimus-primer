@@ -94,9 +94,9 @@ body.page-template-page-home {
       overflow: hidden;
       img {
         position: absolute;
-        top: 10%;
-        right: 10%;
-        max-width: 50%;
+        top: 0;
+        right: 0;
+        max-width: 100%;
         transition: all 2s ease-out 0s;
       }
       h2 {
