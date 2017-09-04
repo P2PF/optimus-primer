@@ -23,7 +23,8 @@ exports.plugins = {
             precision: 8,
             includePaths: [
                 'node_modules/ladda/css',
-                'node_modules/roboto-fontface/css/roboto/sass'
+                'node_modules/roboto-fontface/css/roboto/sass',
+                'node_modules/font-awesome/scss',
             ]
         }
     },
@@ -36,7 +37,7 @@ exports.plugins = {
         fonts: [
             "app/assets/fonts/",
             "node_modules/roboto-fontface/fonts/",
-
+            "node_modules/font-awesome/fonts/",
         ],
         'fonts/noticia-text': [
             "node_modules/typeface-noticia-text/files/"

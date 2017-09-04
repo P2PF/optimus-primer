@@ -49,6 +49,14 @@ body.page-template-page-home {
   header, footer {
     display: none;
   }
+  .pretty {
+    animation: BackgroundAnimation 30s ease infinite;
+    @keyframes BackgroundAnimation {
+      0%{background-color:$COLOR4}
+      50%{background-color:$COLOR2}
+      100%{background-color:$COLOR4}
+    }
+  }
   div#front {
     position: absolute;
     left: 0;
@@ -56,28 +64,7 @@ body.page-template-page-home {
     cursor: pointer;
     width: 100%;
     height: 100%;
-    background: linear-gradient(300deg, #a9c339, #24a2a0);
-    background-size: 400% 400%;
-
-    -webkit-animation: BackgroundAnimation 30s ease infinite;
-    -moz-animation: BackgroundAnimation 30s ease infinite;
-    animation: BackgroundAnimation 30s ease infinite;
-
-    @-webkit-keyframes BackgroundAnimation {
-      0%{background-position:0% 25%}
-      50%{background-position:100% 76%}
-      100%{background-position:0% 25%}
-    }
-    @-moz-keyframes BackgroundAnimation {
-      0%{background-position:0% 25%}
-      50%{background-position:100% 76%}
-      100%{background-position:0% 25%}
-    }
-    @keyframes BackgroundAnimation {
-      0%{background-position:0% 25%}
-      50%{background-position:100% 76%}
-      100%{background-position:0% 25%}
-    }
+    background-color: $COLOR4;
 
     transition: all 2s ease-out 0s;
     z-index: 1000;
@@ -208,13 +195,13 @@ body.page-template-page-home {
       background-color: $COLOR4;
     }
     .grid-block:nth-child(4n+2) {
-      background-color: $COLOR1;
+      background-color: $COLOR3;
     }
     .grid-block:nth-child(4n+3) {
-      background-color: $COLOR2;
+      background-color: $COLOR1;
     }
     .grid-block:nth-child(4n+4) {
-      background-color: $COLOR3;
+      background-color: $COLOR2;
     }
 
   }
@@ -237,6 +224,8 @@ body.page-template-page-home {
       overflow: hidden;
       img {
         transition: all 2s ease-out 0s;
+        max-width: 90%;
+        margin: 5%;
       }
       h2 {
         @include grid-title;
@@ -292,36 +281,36 @@ body.page-template-page-home {
     }
   }
 
+  div.page-grid div.grid-block:nth-child(9n+1) .grid-block-base {
+    background-color: $COLOR1;
+  }
+
   div.page-grid div.grid-block:nth-child(9n+2) .grid-block-base {
-    background-color: #EEB982;
+    background-color: $COLOR2_3;
+  }
+
+  div.page-grid div.grid-block:nth-child(9n+3) .grid-block-base {
+    background-color: $COLOR3;
   }
 
   div.page-grid div.grid-block:nth-child(9n+4) .grid-block-base {
+    background-color: $COLOR2;
+  }
+
+  div.page-grid div.grid-block:nth-child(9n+5) .grid-block-base {
     background-color: $COLOR4;
   }
 
   div.page-grid div.grid-block:nth-child(9n+6) .grid-block-base {
-    background-color: #44A59C;
+    background-color: $COLOR1_3;
   }
 
   div.page-grid div.grid-block:nth-child(9n+7) .grid-block-base {
-    background-color: #39847B;
+    background-color: $COLOR3_2;
   }
 
-  div.page-grid div.grid-block:nth-child(9n+1) .grid-block-base {
-    background-color: #E49748;
-  }
-
-  div.page-grid div.grid-block:nth-child(9n+3) .grid-block-base {
-    background-color: #D88C76;
-  }
-
-  div.page-grid div.grid-block:nth-child(9n+5) .grid-block-base {
-    background-color: #D07F42;
-  }
-
-  div.page-grid div.grid-block:nth-child(9n+7) .grid-block-base {
-    background-color: #66A1A9;
+  div.page-grid div.grid-block:nth-child(9n+8) .grid-block-base {
+    background-color: $COLOR4_3;
   }
 
   div.page-grid div.grid-block.next .grid-block-base {
@@ -349,14 +338,24 @@ body.page-template-page-home {
   .entry-content {
     a:not(.button) {
       margin: 0 4px;
-      color: #333;
+      color: $COLOR3;
       font-weight: bold;
-      text-decoration: underline;
+      //text-decoration: underline;
       text-decoration-color: #ddd;
       &:hover {
         text-decoration-color: #000;
       }
     }
+  }
+}
+
+.page-template-template-fullwidth.page-number-1 {
+  .wh-page-title-bar {
+    background-color: #fff;
+    h1.page-title {
+      color: $COLOR1;
+    }
+    border-bottom: 1px solid #afafaf;
   }
 }
 
@@ -479,16 +478,31 @@ body.page-template-page-home {
   background-color: #dddddd;
 }
 
+.wh-breadcrumbs-bar {
+  border: none;
+}
+
 nav.breadcrumbs {
-  font-family: "Noticia Text";
+  font-family: "Roboto";
+  font-weight: bold;
   a {
-    text-decoration: underline;
+    font-weight: normal;
+    text-decoration: none;
     color: #333;
     text-decoration-color: #ddd;
     &:hover {
+      text-decoration: underline;
       color: #000;
       text-decoration-color: #000;
     }
+
+  }
+  .trail-items li::after {
+    content: "\f054";
+    padding: 0 0.5em;
+    color: #000;
+    font: FontAwesome;
+    text-rendering: auto;
   }
 }
 
@@ -509,3 +523,4 @@ footer {
     margin-right: 28px;
   }
 }
+

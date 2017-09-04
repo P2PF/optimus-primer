@@ -13,7 +13,7 @@ function first_word($str) {
 
 $img = get_stylesheet_directory_uri() . '/public/img';
 ?>
-<div id="front">
+<div id="front" class="pretty">
     <img id="logo" src="<?php echo $img ?>/home-logo.png">
     <img id="tree" src="<?php echo $img ?>/home-bg.png">
     <div id="welcome">
@@ -70,7 +70,7 @@ $img = get_stylesheet_directory_uri() . '/public/img';
     $(function () {
 //        $('#arrow').jAnimateSequence(['fadeOutRight']);
         $('#front').on('click', function () {
-            $(this).addClass('animated zoomOutLeft');
+            $(this).removeClass('pretty').addClass('animated zoomOutLeft');
             $('header').fadeIn(2000);
         });
     });
