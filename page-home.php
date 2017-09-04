@@ -15,7 +15,7 @@ $img = get_stylesheet_directory_uri() . '/public/img';
 ?>
 <div id="front">
     <img id="logo" src="<?php echo $img ?>/home-logo.svg">
-    <img id="welcome" src="<?php echo $img ?>/home-welcome.png" class="animate bounceInLeft">
+    <img id="welcome" src="<?php echo $img ?>/home-welcome.png" class="">
 </div>
 <div id="back">
 
@@ -64,6 +64,7 @@ $img = get_stylesheet_directory_uri() . '/public/img';
 <script>
     window.$ = jQuery;
     $(function () {
+        $('#welcome').jAnimateSequence(['bounce', 'tada', 'wobble']);
         $('#front').on('click', function () {
             $(this).addClass('animated zoomOutLeft');
         });

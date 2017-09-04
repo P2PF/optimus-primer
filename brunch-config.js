@@ -56,8 +56,12 @@ exports.npm = {
     globals: {
         AOS: "aos"
     },
-    aliases: {},
-    static: [],
+    aliases: {
+        "janimate": "janimate/dist/janimate.js",
+    },
+    static: [
+        "node_modules/janimate/dist/janimate.js",
+    ],
 };
 
 exports.modules = {
