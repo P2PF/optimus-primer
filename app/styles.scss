@@ -341,10 +341,32 @@ body.page-template-page-home {
       color: $COLOR3;
       font-weight: bold;
       //text-decoration: underline;
-      text-decoration-color: #ddd;
+      text-decoration-color: $COLOR3;
       &:hover {
-        text-decoration-color: #000;
+        text-decoration: underline;
       }
+    }
+    /* Glossary */
+    .wp-glossary {
+      a {
+        color: #fff;
+        background-color: #000;
+        padding: 0 4px;
+      }
+    }
+    a.case {
+      color: #fff;
+      background-color: $COLOR4;
+      padding: 0 4px;
+    }
+    h1 {
+      font-family: "Roboto";
+      font-weight: bold;
+      border-bottom: 1px solid #afafaf;
+      padding-bottom: 22px;
+    }
+    ul {
+      list-style-type: disc;
     }
   }
 }
@@ -501,7 +523,7 @@ nav.breadcrumbs {
     content: "\f054";
     padding: 0 0.5em;
     color: #000;
-    font: FontAwesome;
+    font-family: "FontAwesome";
     text-rendering: auto;
   }
 }
