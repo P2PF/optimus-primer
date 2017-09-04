@@ -14,8 +14,12 @@ function first_word($str) {
 $img = get_stylesheet_directory_uri() . '/public/img';
 ?>
 <div id="front">
-    <img id="logo" src="<?php echo $img ?>/home-logo.svg">
-    <img id="welcome" src="<?php echo $img ?>/home-welcome.png" class="">
+    <img id="logo" src="<?php echo $img ?>/home-logo.png">
+    <img id="tree" src="<?php echo $img ?>/home-bg.png">
+    <div id="welcome">
+        <img src="<?php echo $img ?>/home-welcome.png" class="">
+        <img id="arrow" src="<?php echo $img ?>/home-welcome-arrow.png" class="animated fadeInLeft">
+    </div>
 </div>
 <div id="back">
 
@@ -64,9 +68,10 @@ $img = get_stylesheet_directory_uri() . '/public/img';
 <script>
     window.$ = jQuery;
     $(function () {
-        $('#welcome').jAnimateSequence(['bounce', 'tada', 'wobble']);
+//        $('#arrow').jAnimateSequence(['fadeOutRight']);
         $('#front').on('click', function () {
             $(this).addClass('animated zoomOutLeft');
+            $('header').fadeIn(2000);
         });
     });
 </script>
