@@ -33,6 +33,11 @@ exports.plugins = {
             require('autoprefixer')(['last 8 versions']),
         ],
     },
+    cleancss: {
+        keepSpecialComments: 0,
+        removeEmpty: true,
+        // ignored: /non_minimize\.css/,
+    },
     copycat: {
         fonts: [
             "app/assets/fonts/",
