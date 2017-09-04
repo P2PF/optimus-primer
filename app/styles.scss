@@ -52,9 +52,15 @@ body.page-template-page-home {
   .pretty {
     animation: BackgroundAnimation 30s ease infinite;
     @keyframes BackgroundAnimation {
-      0%{background-color:$COLOR4}
-      50%{background-color:$COLOR2}
-      100%{background-color:$COLOR4}
+      0% {
+        background-color: $COLOR4
+      }
+      50% {
+        background-color: $COLOR2
+      }
+      100% {
+        background-color: $COLOR4
+      }
     }
   }
   div#front {
@@ -347,11 +353,13 @@ body.page-template-page-home {
       }
     }
     /* Glossary */
-    .wp-glossary {
+    .wp-glossary,
+    .itg-glossary {
       a {
         color: #fff;
         background-color: #000;
         padding: 0 4px;
+        text-decoration: none;
       }
     }
     a.case {
