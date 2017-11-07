@@ -343,12 +343,13 @@ body.page-template-page-home {
 .page-template-template-fullwidth {
   .entry-content {
     a:not(.button) {
-      margin: 0 4px;
+      //margin: 0 4px;
       color: $COLOR3;
       font-weight: bold;
-      //text-decoration: underline;
-      text-decoration-color: $COLOR3;
+      text-decoration: underline;
+      text-decoration-color: lighten($COLOR3,25%);
       &:hover {
+        text-decoration-color: $COLOR3;
         text-decoration: underline;
       }
     }
@@ -377,13 +378,22 @@ body.page-template-page-home {
       list-style-type: disc;
     }
   }
+  @include desktop {
+    .wpb_text_column {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+  }
+  .vc_row p {
+    margin-bottom: 2em;
+  }
 }
 
 .page-template-template-fullwidth.page-number-1 {
   .wh-page-title-bar {
     background-color: #fff;
     h1.page-title {
-      color: $COLOR1;
+      color: $COLOR4;
     }
     border-bottom: 1px solid #afafaf;
   }
@@ -399,8 +409,9 @@ body.page-template-page-home {
       color: #4A4A4A;
       font-family: "Noticia Text";
       font-size: 36px;
-      line-height: 27px;
+      line-height: 1.2em;
       display: block;
+      font-weight: normal;
       .number {
         display: block;
         color: #F19551;
@@ -458,6 +469,9 @@ body.page-template-page-home {
     background: url("../img/arrow-left.png") $COLOR1 2.5% 50% no-repeat;
     width: 50%;
     float: left;
+    @include tablet {
+      padding-left: 48px;
+    }
     @include mobile {
       width: 100%;
       padding-left: 48px;
@@ -468,6 +482,9 @@ body.page-template-page-home {
     background: url("../img/arrow-right.png") $COLOR2 97.5% 50% no-repeat;
     width: 50%;
     float: right;
+    @include tablet {
+      padding-right: 48px;
+    }
     @include mobile {
       width: 100%;
       padding-right: 48px;
@@ -515,6 +532,7 @@ body.page-template-page-home {
 nav.breadcrumbs {
   font-family: "Roboto";
   font-weight: bold;
+  line-height: 1.5em;
   a {
     font-weight: normal;
     text-decoration: none;
@@ -528,7 +546,7 @@ nav.breadcrumbs {
 
   }
   .trail-items li::after {
-    content: "\f054";
+    content: "\f105";
     padding: 0 0.5em;
     color: #000;
     font-family: "FontAwesome";
