@@ -1,0 +1,475 @@
+/* BOOKSHLEF */
+.bookshelf {
+  list-style: none;
+  margin: 1em 0;
+  position: relative;
+  text-align: center;
+}
+
+.bookshelf figure {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 1em 0;
+  position: relative;
+  vertical-align: top;
+  width: 280px;
+}
+
+/* Perspective wrapper, figure and book */
+.perspective {
+  height: 100%;
+  perspective: 1800px;
+  position: relative;
+  -webkit-perspective: 1800px;
+  width: 100%;
+}
+
+.bookshelf .book {
+  height: 260px;
+  margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  width: 180px;
+}
+
+.bookshelf .book div {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+}
+
+.bookshelf .cover {
+  transform-origin: 0% 50%;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+  -webkit-transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.bookshelf .book .front {
+  background-color: #ddd;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+}
+
+.bookshelf .book .front:after {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.bookshelf .book .front img {
+  display: none;
+}
+
+.no-js .bookshelf .book .front img {
+  display: block;
+}
+
+.bookshelf .book .spine {
+  background-color: #ccc;
+  background-position: center center;
+  background-size: 100%;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  transform: translateX(-100%) rotateY(-90deg);
+  transform-origin: 100% 50%;
+  transform-style: preserve-3d;
+  visibility: hidden;
+  -webkit-transform: translateX(-100%) rotateY(-90deg);
+  -webkit-transform-origin: 100% 50%;
+  -webkit-transform-style: preserve-3d;
+  width: 20px;
+  z-index: 10;
+}
+
+.bookshelf .book .spine:after {
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.bookshelf .book .spine img {
+  display: none;
+}
+
+/* Buttons and figcaption */
+.buttons {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.buttons a {
+  color: #999;
+  color: rgba(100, 105, 106, 0.7);
+  display: inline-block;
+  font-size: 0.75em;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding: 0 8px;
+  text-transform: uppercase;
+}
+
+.buttons a:first-child:not(:only-child) {
+  border-right: 1px solid rgba(100, 105, 106, 0.3);
+}
+
+.buttons a:hover, .buttons a:active {
+  color: #64696a;
+}
+
+.bookshelf figcaption {
+  padding: 0 2em;
+  position: relative;
+  text-align: center;
+  top: 100%;
+}
+
+.bookshelf figcaption h2 {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin: 1em 0 0 0;
+}
+
+.bookshelf figcaption h2 span {
+  display: block;
+  font-size: .6em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 1em 0 0 0;
+  padding: 1em 0 0 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.bookshelf figcaption h2 span:before, .details ul li:first-child:after {
+  background: rgba(0, 0, 0, 0.1);
+  content: '';
+  height: 1px;
+  left: 40%;
+  position: absolute;
+  top: 0;
+  width: 20%;
+}
+
+/* Details panel */
+.details {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.details ul {
+  font-size: 0.875em;
+  list-style: none;
+  margin: 0;
+  padding: 2em 2em 0 3em;
+  text-align: left;
+}
+
+.details ul li {
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
+.details ul li:not(:first-child) {
+  font-weight: 700;
+}
+
+.details ul li:first-child {
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+  position: relative;
+}
+
+.details ul li:first-child::after {
+  left: 0;
+  top: 100%;
+}
+
+.close-details {
+  cursor: pointer;
+  font-size: 0;
+  height: 20px;
+  opacity: 0.6;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  visibility: hidden;
+  width: 20px;
+}
+
+.details-open .close-details {
+  visibility: visible;
+}
+
+.close-details:hover {
+  opacity: 1;
+}
+
+.close-details:before, .close-details:after {
+  background: #333;
+  content: '';
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.close-details:before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.close-details:after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* Transitions */
+.book {
+  transform-origin: 0% 50%;
+  transition: transform 0.5s, opacity 0.3s 0.3s;
+  -webkit-transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.3s 0.3s;
+}
+
+/* Details open / view details */
+.bookshelf figure {
+  transition: z-index 0s 0.3s;
+  -webkit-transition: z-index 0s 0.3s;
+  z-index: 100;
+}
+
+.bookshelf figure.details-open {
+  transition: none;
+  -webkit-transition: none;
+  z-index: 101;
+}
+
+.csstransformspreserve3d .details-open .book {
+  transform: translateX(-36px) rotateY(90deg);
+  transition: transform 0.3s;
+  -webkit-transform: translateX(-36px) rotateY(90deg);
+  -webkit-transition: -webkit-transform 0.3s;
+}
+
+.no-csstransformspreserve3d .details-open .book {
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+}
+
+.csstransformspreserve3d .spine {
+  transition: visibility 0s 0.5s;
+  -webkit-transition: visibility 0s 0.5s;
+}
+
+.csstransformspreserve3d .details-open .spine {
+  transition: none;
+  visibility: visible;
+  -webkit-transition: none;
+}
+
+.details {
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  z-index: -1;
+}
+
+.details-open .details {
+  opacity: 1;
+  transition: opacity 0.5s, visibility 0s;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, visibility 0s;
+  z-index: 10;
+}
+
+.details ul li {
+  opacity: 0;
+  transform: translateX(30%);
+  transition: transform 0.3s, opacity 0.3s;
+  visibility: visible;
+  -webkit-transform: translateX(30%);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+}
+
+.details-open .details ul li:first-child {
+  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+}
+
+.details-open .details ul li:nth-child(2) {
+  transition-delay: 0.15s;
+  -webkit-transition-delay: 0.15s;
+}
+
+.details-open .details ul li:nth-child(3) {
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+}
+
+.details-open .details ul li:nth-child(4) {
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+}
+
+.details-open .details ul li {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+/* Details background */
+.bookshelf figure:before {
+  background: #fff;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+  width: 100%;
+}
+
+.no-cssgradients .bookshelf figure:before {
+  background: #fafafa;
+}
+
+.bookshelf figure.details-open:before {
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0s;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s, visibility 0s;
+}
+
+/* Overlay when viewing details */
+.bookshelf figure:after {
+  backface-visibility: hidden;
+  background: rgba(51, 51, 51, 0.1);
+  content: '';
+  height: 0;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.3s, height 0s 0.3s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s, height 0s 0.3s;
+  width: 100%;
+  z-index: -1;
+}
+
+.bookshelf figure.details-open:after {
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+}
+
+/* Basic Functionality */
+.no-csstransformspreserve3d .details {
+  display: none;
+}
+
+.no-csstransformspreserve3d .details-open .details {
+  display: block;
+}
+
+.no-csstransformspreserve3d .details-open .perspective,
+.no-csstransformspreserve3d .details-open .buttons {
+  visibility: hidden;
+}
+
+.no-csstransformspreserve3d .close-details {
+  font-size: 20px;
+}
+
+.no-csstransformspreserve3d .close-details:before,
+.no-csstransformspreserve3d .close-details:after {
+  display: none;
+}
+
+/* Animations */
+@-webkit-keyframes openSmallBook {
+  0% {
+  }
+  55%, 100% {
+    -webkit-transform: rotateY(-180deg)
+  }
+}
+
+@keyframes openSmallBook {
+  0% {
+  }
+  55%, 100% {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes closeSmallBook {
+  0%, 45% {
+    -webkit-transform: rotateY(-180deg)
+  }
+  100% {
+    -webkit-transform: rotateY(0deg)
+  }
+}
+
+@keyframes closeSmallBook {
+  0%, 45% {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+/* TABLETS */
+@media screen and (min-width: 768px) {
+
+  /* BOOKSHELF */
+  .bookshelf figure {
+    padding: 3em 0;
+    width: 340px;
+  }
+  .bookshelf .details ul {
+    padding: 4em 3em 0 2em;
+    font-size: .925em;
+  }
+  .csstransformspreserve3d .bookshelf .details ul {
+    padding: 4em 3em 0 5.2em;
+    font-size: .925em;
+  }
+  .bookshelf figcaption h2 {
+    font-size: 1.4em;
+  }
+
+}
