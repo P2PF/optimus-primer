@@ -4,6 +4,31 @@
 get_header();
 $current_post = get_post();
 ?>
+
+<div class="<?php echo petal_class( 'page-title-row' ); ?>">
+    <div class="<?php echo petal_class( 'container' ); ?>">
+        <div class="<?php echo petal_class( 'page-title-grid-wrapper' ); ?>">
+            <h1 class="<?php echo petal_class( 'page-title' ); ?>"><?php echo petal_title(); ?></h1>
+            <?php if ( is_home() && $blog_archive_subtitle ) : ?>
+                <h2 class="<?php echo petal_class( 'page-subtitle' ); ?>"><?php echo esc_html( $blog_archive_subtitle ); ?></h2>
+            <?php elseif ( is_page() || petal_is_shop() || ( is_single() && get_post_type() == 'project' ) ) : ?>
+                <?php global $post;
+                if (petal_is_shop()) {
+                    $post_id = petal_get_shop_page_id();
+                } else {
+                    $post_id = $post->ID;
+                }
+                $subtitle = petal_get_rwmb_meta( 'subtitle_single_page', $post_id ); ?>
+                <?php if ( $subtitle ) : ?>
+                    <h2 class="<?php echo petal_class( 'page-subtitle' ); ?>"><?php echo esc_html( $subtitle ); ?></h2>
+                <?php endif; ?>
+            <?php elseif ( is_single() ) : ?>
+                <?php get_template_part( 'templates/entry-meta' ); ?>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
 <?php get_template_part('templates/title'); ?>
 <div class="<?php echo petal_class('main-wrapper') ?>">
     <div class="<?php echo petal_class('container') ?>">
@@ -12,9 +37,6 @@ $current_post = get_post();
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php $current_post = get_post(); ?>
                 <div <?php post_class(); ?>>
-                    <?php if ( ! petal_get_option( 'archive-single-use-page-title', false ) ) : ?>
-                        <?php the_title( '<h1>', '</h1>' ); ?>
-                    <?php endif; ?>
                     <div class="entry-content">
                         <?php the_content(); ?>
                     </div>

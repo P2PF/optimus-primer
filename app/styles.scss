@@ -339,6 +339,12 @@ body.page-template-page-home {
     font-size: 18px;
     line-height: 32px;
   }
+  @include desktop {
+    .entry-content {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  }
 }
 
 .project-template-default,
@@ -446,12 +452,6 @@ body.page-template-page-home {
       display: none;
     }
   }
-  @include desktop {
-    .entry-content {
-      padding-left: 15%;
-      padding-right: 15%;
-    }
-  }
 }
 
 .page-number-3 {
@@ -466,10 +466,19 @@ body.page-template-page-home {
   }
 }
 
-.project-template-default {
+.post-type-archive-project,
+.project-template-default,
+.single-project {
+  .wh-page-title-bar {
+    background-color: $COLOR2;
+  }
   h1 {
-    color: #dd6c2e;
+    color: $COLOR2;
     border: none;
+  }
+  .entry-content {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 }
 
