@@ -17,7 +17,7 @@ $img = get_stylesheet_directory_uri() . '/public/img';
     <img id="logo" src="<?php echo $img ?>/home-logo.png">
     <img id="tree" src="<?php echo $img ?>/home-bg.png">
     <div id="welcome">
-        <img src="<?php echo $img ?>/home-welcome.png" class="">
+        <img id="text" src="<?php echo $img ?>/home-welcome.png" class="">
         <img id="arrow" src="<?php echo $img ?>/home-welcome-arrow.png" class="animated fadeInLeft">
     </div>
 </div>
@@ -70,7 +70,7 @@ $img = get_stylesheet_directory_uri() . '/public/img';
     $(function () {
 //        $('#arrow').jAnimateSequence(['fadeOutRight']);
         $('#front').on('click', function () {
-            $(this).removeClass('pretty').addClass('animated zoomOutLeft');
+            $(this).removeClass('pretty').addClass('animated slideOutLeft');
             $('header').fadeIn(2000);
         });
     });
