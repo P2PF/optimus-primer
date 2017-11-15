@@ -3,7 +3,7 @@
  * @package WordPress
  * @subpackage Wheels
  *
- * Template Name: Page index
+ * Template Name: Glossary entry
  */
 get_header();
 ?>

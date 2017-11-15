@@ -16,6 +16,7 @@
     line-height: 75px;
     font-family: "Roboto-Black";
     border-bottom: 3px solid #FFFFFF;
+    margin-bottom: 16px;
     @include mobile {
       font-size: 36px;
       line-height: 48px;
@@ -186,6 +187,7 @@ body.page-template-page-home {
         }
 
         .btn {
+          transition: all 0.3s ease-out 0s;
           @include default-font;
           font-size: 0.9em;
           width: 50%;
@@ -283,23 +285,26 @@ body.page-template-page-home {
       background-color: rgba(0, 0, 0, 0.2);
       margin: 5%;
       .btn {
+        transition: all 0.3s ease-out 0s;
         @include default-font;
         width: 50%;
         display: block;
         margin: 200px auto;
         padding: 8px;
-        background-color: orange;
+        background-color: #DD6C2E;
         color: #ffffff;
         border-radius: 8px;
         text-align: center;
         text-transform: uppercase;
         //box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
       }
-
+      .btn:hover {
+        background-color: #24A2A0;
+      }
     }
     .grid-block-base:hover {
       img {
-        transform: scale(1.1);
+        transform: scale(1.2);
         transition: all 5s ease-out 0s;
       }
       .grid-block-hover {
@@ -531,6 +536,7 @@ body.page-template-page-home {
     font-size: 20px;
   }
   .prev {
+    transition: all 0.3s ease-out 0s;
     padding-left: 5%;
     background: url("../img/arrow-left.png") $COLOR1 2.5% 50% no-repeat;
     width: 50%;
@@ -543,7 +549,11 @@ body.page-template-page-home {
       padding-left: 48px;
     }
   }
+  .prev:hover {
+    background: url("../img/arrow-left.png") darken($COLOR1,10%) 1.5% 50% no-repeat;
+  }
   .next {
+    transition: all 0.3s ease-out 0s;
     padding-right: 5%;
     background: url("../img/arrow-right.png") $COLOR2 97.5% 50% no-repeat;
     width: 50%;
@@ -555,6 +565,9 @@ body.page-template-page-home {
       width: 100%;
       padding-right: 48px;
     }
+  }
+  .next:hover {
+    background: url("../img/arrow-right.png") darken($COLOR2,10%) 98.5% 50% no-repeat;
   }
   &::after {
     clear: both;
