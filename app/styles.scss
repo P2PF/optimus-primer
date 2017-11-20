@@ -8,7 +8,9 @@
 
 .wh-page-title-bar {
   padding-top: 80px;
-  background-color: $COLOR3;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-image: url("../img/title-bg-01.png");
   border: none;
   h1.page-title {
     color: #ffffff;
@@ -444,6 +446,7 @@ body.page-template-page-home {
 
 .page-number-2 {
   .wh-page-title-bar {
+    background-image: url("../img/title-bg-02.png");
     background-color: $COLOR5;
   }
   .page-entry {
@@ -489,13 +492,73 @@ body.page-template-page-home {
 
 .page-number-3 {
   .wh-page-title-bar {
+    background-image: url("../img/title-bg-03.png");
     background-color: $COLOR1;
   }
 }
 
 .page-number-4 {
   .wh-page-title-bar {
+    background-image: url("../img/title-bg-04.png");
     background-color: $COLOR2;
+  }
+}
+
+.page-template-page-case-study-list {
+  .wh-page-title-bar {
+    background-image: url("../img/title-bg-04.png");
+    background-color: transparent;
+    h1 {
+      color: $COLOR4;
+      border: none;
+    }
+  }
+  .wh-content {
+    border: 40px solid #E8EAEB;
+  }
+  .entry-content.wh-padding {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .page-entry {
+    background: url("../img/icon-case-study.png") top left no-repeat;
+    padding-left: 100px;
+    min-height: 100px;
+    margin-top: 44px;
+    padding-top: 12px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #DDDDDD;
+    h2 {
+      font-family: "Noticia Text";
+      font-size: 36px;
+      margin-bottom: 12px;
+      border: none;
+      .number {
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 1.7em;
+        width: 72px;
+        text-align: right;
+        display: inline-block;
+      }
+    }
+    .link {
+      padding-left: 84px;
+      font-family: "Noticia Text";
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 35px;
+      a {
+        color: #DD6C2E;
+      }
+      a:hover {
+        color: $COLOR1_1;
+        text-decoration: underline;
+      }
+    }
+  }
+  .page-entry:last-child {
+    margin-bottom: 100px;
   }
 }
 
@@ -550,7 +613,7 @@ body.page-template-page-home {
     }
   }
   .prev:hover {
-    background: url("../img/arrow-left.png") darken($COLOR1,10%) 1.5% 50% no-repeat;
+    background: url("../img/arrow-left.png") darken($COLOR1, 10%) 1.5% 50% no-repeat;
   }
   .next {
     transition: all 0.3s ease-out 0s;
@@ -567,7 +630,7 @@ body.page-template-page-home {
     }
   }
   .next:hover {
-    background: url("../img/arrow-right.png") darken($COLOR2,10%) 98.5% 50% no-repeat;
+    background: url("../img/arrow-right.png") darken($COLOR2, 10%) 98.5% 50% no-repeat;
   }
   &::after {
     clear: both;
