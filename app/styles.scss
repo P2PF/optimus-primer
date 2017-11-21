@@ -76,7 +76,7 @@ body.page-template-page-home {
     background-color: $COLOR4;
 
     transition: all 2s ease-out 0s;
-    z-index: 1000;
+    z-index: 12000;
     &.gone {
       left: -100%;
     }

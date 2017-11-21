@@ -1,0 +1,1 @@
+jQuery('#menu-side-burguer').removeClass('sf-menu');

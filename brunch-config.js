@@ -71,5 +71,7 @@ exports.npm = {
 };
 
 exports.modules = {
-    autoRequire: {}
+    autoRequire: {
+        'js/app.js': ['quick-sidebar-fix']
+    }
 };
