@@ -4,7 +4,7 @@ $COLOR1: #EFB900;
 $COLOR2: #A9C339;
 $COLOR3: #DD6C2E;
 $COLOR4: #24A2A0;
-$COLOR5: #F19551;
+$COLOR5: #DD6C2E;
 
 $COLOR1_1: lighten($COLOR1, 20%);
 $COLOR1_2: lighten($COLOR1, 10%);
@@ -25,3 +25,11 @@ $COLOR4_1: lighten($COLOR4, 20%);
 $COLOR4_2: lighten($COLOR4, 10%);
 $COLOR4_3: darken($COLOR4, 10%);
 $COLOR4_4: darken($COLOR4, 20%);
+
+$COLOR5_1: lighten($COLOR5, 20%);
+$COLOR5_2: lighten($COLOR5, 10%);
+$COLOR5_3: darken($COLOR5, 10%);
+$COLOR5_4: darken($COLOR5, 20%);
+
+$BUTTON: #DD6C2E; // $COLOR5
+$BUTTON_HOVER: #24A2A0; // $COLOR4

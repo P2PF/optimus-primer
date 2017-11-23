@@ -196,7 +196,7 @@ body.page-template-page-home {
           display: block;
           margin: 14px auto;
           padding: 8px;
-          background-color: #DD6C2E;
+          background-color: $BUTTON;
           color: #ffffff;
           border-radius: 8px;
           text-align: center;
@@ -206,7 +206,7 @@ body.page-template-page-home {
           }
         }
         .btn:hover {
-          background-color: #24A2A0;
+          background-color: $BUTTON_HOVER
         }
       }
 
@@ -460,7 +460,7 @@ body.page-template-page-home {
       font-weight: normal;
       .number {
         display: block;
-        color: #F19551;
+        color: $COLOR5;
         font-family: Roboto;
         font-size: 64px;
         font-weight: 900;
@@ -468,7 +468,7 @@ body.page-template-page-home {
       }
     }
     h2:hover {
-      color: #F19551;
+      color: $COLOR5_3;
     }
     .excerpt {
       color: #4A4A4A;
@@ -501,6 +501,19 @@ body.page-template-page-home {
   .wh-page-title-bar {
     background-image: url("../img/title-bg-04.png");
     background-color: $COLOR2;
+  }
+  h4 {
+    font-family:Robot;
+  }
+  a.vc_btn3 {
+    background-color: $BUTTON !important;
+    text-transform: uppercase;
+  }
+  a.vc_btn3:hover {
+    background-color: $BUTTON_HOVER !important;
+  }
+  .vc_gitem-post-data p {
+    font-family: "Noticia Text";
   }
 }
 
@@ -758,12 +771,39 @@ div.bookshelf {
       height: 320px;
     }
   }
+  .buttons {
+    a {
+      background-color: #DD6C2E;
+      color: #ffffff;
+      border-radius: 4px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    a:hover {
+      background-color: #24A2A0;
+    }
+  }
+
 }
 
 /* quick sidebar */
 
 .wh-quick-sidebar-toggler-wrapper {
   margin-top: -45px !important;
+  margin-right: 15px;
+}
+
+.wh-quick-sidebar {
+  background-color: #19363A;
+}
+
+.wh-quick-sidebar-toggler {
+  display: block;
+  margin-top: -35px;
+  i {
+    font-size: 26px;
+    text-shadow: 1px 1px 2px #ffffff;
+  }
 }
 
 .wh-quick-sidebar .wh-menu-vertical li a {
@@ -790,6 +830,7 @@ ul#menu-side-burguer {
     line-height: 24px;
   }
   ul.sub-menu {
+    padding: 0;
     li {
       text-align: left;
       list-style: none;
