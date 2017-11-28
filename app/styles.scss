@@ -32,6 +32,86 @@
 .wh-page-title-bar {
 }
 
+.nav-links {
+  clear: both;
+  h2 {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  a {
+    color: #ffffff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  div {
+    padding: 24px 42px;
+    min-height: 130px;
+    font-size: 20px;
+  }
+  .prev {
+    transition: all 0.3s ease-out 0s;
+    padding-left: 5%;
+    background: url("../img/arrow-left.png") $COLOR1 2.5% 50% no-repeat;
+    width: 50%;
+    float: left;
+    @include tablet {
+      padding-left: 48px;
+    }
+    @include mobile {
+      width: 100%;
+      padding-left: 48px;
+    }
+  }
+  .prev:hover {
+    background: url("../img/arrow-left.png") darken($COLOR1, 10%) 1.5% 50% no-repeat;
+  }
+  .next {
+    transition: all 0.3s ease-out 0s;
+    padding-right: 5%;
+    background: url("../img/arrow-right.png") $COLOR2 97.5% 50% no-repeat;
+    width: 50%;
+    float: right;
+    @include tablet {
+      padding-right: 48px;
+    }
+    @include mobile {
+      width: 100%;
+      padding-right: 48px;
+    }
+  }
+  .next:hover {
+    background: url("../img/arrow-right.png") darken($COLOR2, 10%) 98.5% 50% no-repeat;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.nav-links-index {
+  background-color: #24A2A0;
+  min-height: 120px;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 60px;
+  text-align: center;
+  a {
+    display: inline-block;
+    min-height: 60px;
+    padding-left: 88px;
+    margin: 30px auto;
+    color: #ffffff;
+    background: url('../img/icon-all-cases.png') top left no-repeat;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 .page-number-1 {
   .wh-page-title-bar {
     background-color: $COLOR4;
@@ -173,7 +253,7 @@ body.page-template-page-home {
       left: 0;
       top: 100%;
       opacity: 0.0;
-      z-index: 11000;
+      //z-index: 11000; // goes either above or below *both* logo and menu
 
       .excerpt {
         width: 100%;
@@ -503,7 +583,7 @@ body.page-template-page-home {
     background-color: $COLOR2;
   }
   h4 {
-    font-family:Robot;
+    font-family: Robot;
   }
   a.vc_btn3 {
     background-color: $BUTTON !important;
@@ -519,6 +599,7 @@ body.page-template-page-home {
 
 .page-template-page-case-study-list {
   .wh-page-title-bar {
+    padding-top: 230px;
     background-image: url("../img/title-bg-04.png");
     background-color: transparent;
     h1 {
@@ -575,6 +656,80 @@ body.page-template-page-home {
   }
 }
 
+.page-template-template-casestudy {
+  .wh-page-title-bar {
+    padding-top: 230px;
+    background-image: url("../img/title-bg-04.png");
+    background-color: transparent;
+    h1 {
+      color: $COLOR4;
+      border: none;
+    }
+  }
+  .wh-content {
+    border: 40px solid #E8EAEB;
+  }
+  .entry-content.wh-padding {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  .page-entry {
+    background: url("../img/icon-case-study.png") top left no-repeat;
+    padding-left: 100px;
+    min-height: 100px;
+    margin-top: 44px;
+    padding-top: 12px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #DDDDDD;
+    h2 {
+      font-family: "Noticia Text";
+      font-size: 36px;
+      margin-bottom: 12px;
+      border: none;
+      .number {
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 1.7em;
+        width: 72px;
+        text-align: right;
+        display: inline-block;
+      }
+    }
+    .link {
+      padding-left: 84px;
+      font-family: "Noticia Text";
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 35px;
+      a {
+        color: #DD6C2E;
+      }
+      a:hover {
+        color: $COLOR1_1;
+        text-decoration: underline;
+      }
+    }
+  }
+  .page-entry:last-child {
+    margin-bottom: 100px;
+  }
+  .nav-links {
+    .prev {
+      background-color: #758689;
+    }
+    .prev:hover {
+      background-color: darken(#758689,10%);
+    }
+    .next {
+      background-color: #19363A;
+    }
+    .next:hover {
+      background-color: darken(#19363A,10%);
+
+    }
+  }
+}
+
 .post-type-archive-project,
 .project-template-default,
 .single-project {
@@ -591,64 +746,6 @@ body.page-template-page-home {
   }
 }
 
-.nav-links {
-  clear: both;
-  h2 {
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    font-size: 30px;
-    line-height: 40px;
-  }
-  a {
-    color: #ffffff;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  div {
-    padding: 24px 42px;
-    min-height: 130px;
-    font-size: 20px;
-  }
-  .prev {
-    transition: all 0.3s ease-out 0s;
-    padding-left: 5%;
-    background: url("../img/arrow-left.png") $COLOR1 2.5% 50% no-repeat;
-    width: 50%;
-    float: left;
-    @include tablet {
-      padding-left: 48px;
-    }
-    @include mobile {
-      width: 100%;
-      padding-left: 48px;
-    }
-  }
-  .prev:hover {
-    background: url("../img/arrow-left.png") darken($COLOR1, 10%) 1.5% 50% no-repeat;
-  }
-  .next {
-    transition: all 0.3s ease-out 0s;
-    padding-right: 5%;
-    background: url("../img/arrow-right.png") $COLOR2 97.5% 50% no-repeat;
-    width: 50%;
-    float: right;
-    @include tablet {
-      padding-right: 48px;
-    }
-    @include mobile {
-      width: 100%;
-      padding-right: 48px;
-    }
-  }
-  .next:hover {
-    background: url("../img/arrow-right.png") darken($COLOR2, 10%) 98.5% 50% no-repeat;
-  }
-  &::after {
-    clear: both;
-  }
-}
 
 @media screen and (min-width: 521px) and (max-width: 768px) {
   .page-number-1 {
@@ -812,7 +909,7 @@ div.bookshelf {
 
 ul#menu-side-burguer {
   & > li {
-    padding-top: 32px;
+    padding-top: 22px;
     background: url('../img/menu-separator.png') 50% top no-repeat;
     & > a {
       color: #FFFFFF;

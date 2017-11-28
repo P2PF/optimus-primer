@@ -69,7 +69,9 @@ $img = get_stylesheet_directory_uri() . '/public/img';
     window.$ = jQuery;
     $(function () {
 //        $('#arrow').jAnimateSequence(['fadeOutRight']);
+        $('#back').hide();
         $('#front').on('click', function () {
+            $('#back').show();
             $(this).removeClass('pretty').addClass('animated slideOutLeft');
             $('header').fadeIn(2000);
         });
