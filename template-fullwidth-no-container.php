@@ -19,7 +19,7 @@ get_header();
     if (!empty($next_post)): ?>
 		<a href="<?php echo get_permalink($next_post->ID); ?>">
 			<div class="prev">
-				<h2><?php echo $next_post->post_parent == $current_post->post_parent ? "Previous article" : "Previous section" ?></h2>
+				<h2><?php echo $next_post->post_parent==0 || $next_post->post_parent != $current_post->post_parent ? "Previous section" : "Previous article" ?></h2>
                 <?php echo $next_post->post_title; ?>
 			</div>
 		</a>
@@ -29,7 +29,7 @@ get_header();
     if (!empty($next_post)): ?>
 		<a href="<?php echo get_permalink($next_post->ID); ?>">
 			<div class="next">
-				<h2><?php echo $next_post->post_parent == $current_post->post_parent ? "Next article" : "Next section" ?></h2>
+				<h2><?php echo $next_post->post_parent==0 || $next_post->post_parent != $current_post->post_parent ? "Next section" : "Next article" ?></h2>
                 <?php echo $next_post->post_title; ?>
 			</div>
 		</a>
