@@ -855,11 +855,13 @@ nav.breadcrumbs {
   border-top: 2px solid #ddd;
   padding: 22px 0 48px 0;
   margin-top: 48px;
+  font-size: 1.2em;
   a {
-    color: #DD6C2E;
-  }
-  a:hover {
-    color: #24A2A0;
+    color: $COLOR3;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
