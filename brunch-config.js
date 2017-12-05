@@ -72,6 +72,10 @@ exports.npm = {
 
 exports.modules = {
     autoRequire: {
-        'js/app.js': ['quick-sidebar-fix']
+        'js/app.js': [
+            'quick-sidebar-fix',
+            'glossary-lightbox',
+            'theme',
+        ]
     }
 };
