@@ -1,6 +1,7 @@
 @import "variables";
 @import "fonts";
 @import "mixins";
+@import "vc_grid-loading";
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noticia Text";
@@ -583,11 +584,7 @@ body.page-template-page-home {
   }
 }
 
-.page-number-2 {
-  .wh-page-title-bar {
-    background-image: url("../img/title-bg-02.png");
-    background-color: $COLOR5;
-  }
+.page-template-page-index-list {
   .page-entry {
     h2 {
       text-align: center;
@@ -626,6 +623,13 @@ body.page-template-page-home {
     hr {
       display: none;
     }
+  }
+}
+
+.page-number-2 {
+  .wh-page-title-bar {
+    background-image: url("../img/title-bg-02.png");
+    background-color: $COLOR5;
   }
 }
 
@@ -721,10 +725,17 @@ body.page-template-page-home {
       border: none;
     }
   }
+  .entry-content {
+    color: #4A4A4A;
+    font-family: "Noticia Text";
+    font-size: 18px;
+    line-height: 32px;
+  }
   .wh-content {
     border: 40px solid #E8EAEB;
   }
   .entry-content.wh-padding {
+    padding-top: 40px;
     padding-left: 12%;
     padding-right: 12%;
   }
@@ -736,6 +747,7 @@ body.page-template-page-home {
     padding-top: 12px;
     padding-bottom: 30px;
     border-bottom: 2px solid #DDDDDD;
+
     h2 {
       font-family: "Noticia Text";
       font-size: 36px;
@@ -1073,3 +1085,5 @@ ul#menu-side-burguer {
   text-shadow: 1px 1px 2px #ffffff;
   font-size: 10px;
 }
+
+

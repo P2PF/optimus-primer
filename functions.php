@@ -6,6 +6,7 @@ add_action('wp_enqueue_scripts', 'qtip_disable', 100001);
 add_filter('the_title', 'number_styling', 10, 2);
 add_filter('body_class', 'number_body_class');
 
+// enqueue child theme CSS, JSs
 function optimus_primer_scripts() {
     $uri = get_stylesheet_directory_uri() . '/public';
     wp_enqueue_style('optimus_primer', $uri . '/css/app.css', array('petal-style', 'petal_options_style'), null);
@@ -21,15 +22,12 @@ function dump_scripts(){
     print '-->';
 }
 
-// dequeue qtip, ithoughts_tooltip_glossary-qtip, ithoughts-core-v5
+// dequeue qtip, ithoughts_tooltip_glossary-qtip
 function qtip_disable() {
     wp_dequeue_script('ithoughts_tooltip_glossary-qtip');
     wp_deregister_script('ithoughts_tooltip_glossary-qtip');
     wp_dequeue_script('qtip');
     wp_deregister_script('qtip');
-//    wp_dequeue_script('optimus_primer_js_app');
-//    wp_deregister_script('optimus_primer_js_app');
-
 }
 
 function number_styling($title, $id = null) {

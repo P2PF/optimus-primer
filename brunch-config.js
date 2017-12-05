@@ -57,7 +57,8 @@ exports.npm = {
     styles: {
         "pace-progress": ['themes/blue/pace-theme-minimal.css'],
         "animate.css": ['animate.css'],
-        "aos": ['dist/aos.css']
+        "aos": ['dist/aos.css'],
+        "featherlight": ['release/featherlight.min.css'],
     },
     globals: {
         AOS: "aos"
@@ -75,7 +76,6 @@ exports.modules = {
         'js/app.js': [
             'quick-sidebar-fix',
             'glossary-lightbox',
-            'theme',
         ]
     }
 };
