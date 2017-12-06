@@ -39,6 +39,6 @@ $current_post = get_post();
         <?php endif; ?>
     </div>
 <div class="nav-links-index">
-    <a href="..">View all the case studies</a>
+    <a href=".">View all the case studies</a>
 </div>
 <?php get_footer(); ?>

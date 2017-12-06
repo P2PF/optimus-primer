@@ -42,6 +42,17 @@ a.vc_btn3,
   background-color: #FFFFFF;
 }
 
+.title-logo {
+  @include mobile {
+    figure {
+      max-width: 70% !important;
+      img {
+        //display: none;
+      }
+    }
+  }
+}
+
 .wh-page-title-bar {
   padding-top: 80px;
   background-repeat: no-repeat;
@@ -145,6 +156,10 @@ a.vc_btn3,
   }
   a:hover {
     text-decoration: underline;
+  }
+  @include mobile {
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -483,9 +498,17 @@ body.page-template-page-home {
     h2 {
       color: #FFFFFF;
       font-family: Roboto;
-      font-size: 90px;
+      font-size: 80px;
       font-weight: bold;
-      line-height: 90px;
+      line-height: 80px;
+      @include mobile {
+        font-size: 48px;
+        line-height: 48px;
+      }
+      @include tablet {
+        font-size: 64px;
+        line-height: 64px;
+      }
     }
   }
 }
@@ -571,6 +594,27 @@ body.page-template-page-home {
   }
   .vc_row p {
     margin-bottom: 2em;
+  }
+}
+
+#featherlight-dim {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.featherlight-content {
+  border-bottom: 40px solid #E8EAEB !important;
+  border: 40px solid #E8EAEB;
+  color: #4A4A4A;
+  font-family: "Noticia Text";
+  font-size: 18px;
+  line-height: 32px;
+  h2 {
+    color: #19363A;
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 60px;
+    border-bottom: 1px solid #4A4A4A;
   }
 }
 
@@ -669,10 +713,16 @@ body.page-template-page-home {
   }
   .wh-content {
     border: 40px solid #E8EAEB;
+    @include mobile {
+      border: 10px solid #E8EAEB;
+    }
   }
   .entry-content.wh-padding {
     padding-left: 12%;
     padding-right: 12%;
+    @include mobile {
+      padding: 2%;
+    }
   }
   .page-entry {
     background: url("../img/icon-case-study.png") top left no-repeat;
@@ -682,6 +732,9 @@ body.page-template-page-home {
     padding-top: 12px;
     padding-bottom: 30px;
     border-bottom: 2px solid #DDDDDD;
+    @include mobile {
+      padding-left: 0;
+    }
     h2 {
       font-family: "Noticia Text";
       font-size: 36px;
@@ -733,11 +786,17 @@ body.page-template-page-home {
   }
   .wh-content {
     border: 40px solid #E8EAEB;
+    @include mobile {
+      border: 10px solid #E8EAEB;
+    }
   }
   .entry-content.wh-padding {
     padding-top: 40px;
     padding-left: 12%;
     padding-right: 12%;
+    @include mobile {
+      padding: 2%;
+    }
   }
   .page-entry {
     background: url("../img/icon-case-study.png") top left no-repeat;
@@ -1014,8 +1073,11 @@ div.bookshelf {
 /* quick sidebar */
 
 .wh-quick-sidebar-toggler-wrapper {
-  margin-top: -45px !important;
-  margin-right: 15px;
+  position: absolute;
+  right: 5px;
+  top: 25px;
+  //margin-top: -45px !important;
+  //margin-right: 15px;
 }
 
 .wh-quick-sidebar {
@@ -1023,8 +1085,8 @@ div.bookshelf {
 }
 
 .wh-quick-sidebar-toggler {
-  display: block;
-  margin-top: -35px;
+  //display: block;
+  margin-top: 25px; // Neutralize .vc_custom_1475763321815 or similar
   i {
     font-size: 26px;
     text-shadow: 1px 1px 2px #ffffff;
@@ -1080,8 +1142,8 @@ ul#menu-side-burguer {
 #wp-share {
   display: inline;
   position: absolute;
-  right: 85px;
-  top: 18px;
+  right: 55px;
+  top: 16px;
   text-shadow: 1px 1px 2px #ffffff;
   font-size: 10px;
 }

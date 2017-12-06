@@ -6,8 +6,14 @@ $('.itg-glossary').on('click', function (e) {
     var $this = $(this);
     var title = $this.data('term-title');
     var content = $this.data('term-content');
-    console.log(title, content);
-    $.featherlight(content,{
-        closeOnClick: 'anywhere'
-    });
+    // console.log(title, content);
+    $.featherlight(
+        '<div class="glossary-content"><h2>'
+        + title
+        + '</h2>'
+        + content
+        + '</div>',
+        {
+            closeOnClick: 'anywhere'
+        });
 });

@@ -2,6 +2,7 @@
  * Override plugins/js_composer//assets/less/shortcodes/vc_basic_grid/vc_grid_loading.less
  * with _visible_ colors.
  */
+@import "variables";
 
 .vc_grid-loading {
   &:before,
