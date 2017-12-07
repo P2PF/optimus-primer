@@ -47,7 +47,7 @@ a.vc_btn3,
     figure {
       max-width: 70% !important;
       img {
-        //display: none;
+        display: none; // uncomment to hide logo on mobile
       }
     }
   }
@@ -1148,4 +1148,8 @@ ul#menu-side-burguer {
   font-size: 10px;
 }
 
+#scrollUp {
+  font-size: 48px;
+  line-height: 48px;
+}
 
