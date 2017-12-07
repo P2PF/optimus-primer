@@ -59,6 +59,7 @@ exports.npm = {
         "animate.css": ['animate.css'],
         "aos": ['dist/aos.css'],
         "featherlight": ['release/featherlight.min.css'],
+        "better-share-button": ["dist/share-button.css"],
     },
     globals: {
         AOS: "aos"
@@ -76,6 +77,7 @@ exports.modules = {
         'js/app.js': [
             'quick-sidebar-fix',
             'glossary-lightbox',
+            'share-button'
         ]
     }
 };
