@@ -1142,10 +1142,20 @@ ul#menu-side-burguer {
 #wp-share {
   display: inline;
   position: absolute;
-  right: 55px;
-  top: 16px;
+  right: 62px;
+  top: 27px;
   text-shadow: 1px 1px 2px #ffffff;
   font-size: 10px;
+  share-button {
+    background: transparent;
+    &::before {
+      font-family: "FontAwesome";
+      font-size: 22px;
+      font-weight: normal;
+      background: transparent;
+      content: "\f1e0"; // @fa-var-share-alt
+    }
+  }
 }
 
 #scrollUp {
