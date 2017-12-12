@@ -77,7 +77,8 @@ exports.modules = {
         'js/app.js': [
             'quick-sidebar-fix',
             'glossary-lightbox',
-            'share-button'
+            'share-button',
+            'theme'
         ]
     }
 };

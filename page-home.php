@@ -68,14 +68,17 @@ $img = get_stylesheet_directory_uri() . '/public/img';
 <script>
     window.$ = jQuery;
     $(function () {
-//        $('#arrow').jAnimateSequence(['fadeOutRight']);
-        $('#back').hide();
-        $('.wh-footer').hide();
-        $('#front').on('click', function () {
-            $('#back').show();
-            $('.wh-footer').show();
-            $(this).removeClass('pretty').addClass('animated slideOutLeft');
-            $('header').fadeIn(2000);
-        });
+        if(window.location.hash=='#home') {
+            $('#front').hide();
+        } else {
+            $('#back').hide();
+            $('.wh-footer').hide();
+            $('#front').on('click', function () {
+                $('#back').show();
+                $('.wh-footer').show();
+                $(this).removeClass('pretty').addClass('animated slideOutLeft');
+                $('header').fadeIn(2000);
+            });
+        }
     });
 </script>

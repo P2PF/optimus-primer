@@ -789,6 +789,23 @@ body.page-template-page-home {
     @include mobile {
       border: 10px solid #E8EAEB;
     }
+    ul {
+      list-style: disc;
+    }
+    a:not(.button) {
+      //margin: 0 4px;
+      color: $BUTTON;
+      font-weight: bold;
+      //text-decoration: underline;
+      //text-decoration-color: lighten($COLOR3,25%);
+      border-bottom: 2px solid lighten($BUTTON, 25%);
+      &:hover {
+        color: $BUTTON_HOVER;
+        //text-decoration-color: $COLOR3;
+        //text-decoration: underline;
+        border-bottom: 2px solid $BUTTON_HOVER;
+      }
+    }
   }
   .entry-content.wh-padding {
     padding-top: 40px;
@@ -887,9 +904,22 @@ body.page-template-page-home {
       line-height: 40px;
     }
   }
-  .entry-content.wh-padding p {
-    padding-left: 12%;
-    padding-right: 12%;
+  .entry-content.wh-padding {
+    p, ul {
+      padding-left: 12%;
+      padding-right: 12%;
+      @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @include tablet {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    ul {
+      margin-left: 32px;
+    }
   }
 }
 
@@ -938,7 +968,14 @@ body.page-template-page-home {
       .grid-block {
         width: 100%;
         .grid-block-base {
-          min-height: 240px;
+          height: 483px;
+          margin: 0;
+          /*
+          img {
+            max-width: 70%;
+            margin: 5% 15%;
+          }
+          */
         }
       }
     }

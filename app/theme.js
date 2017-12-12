@@ -1,3 +1,4 @@
 /* Theme-wide initialization */
-var eq = require('equalheight');
-eq.equalheight('.equalheight');
+jQuery(function(){
+    jQuery('.title-logo a').attr({href:'/#home'});
+});
