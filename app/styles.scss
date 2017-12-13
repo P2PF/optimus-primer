@@ -685,12 +685,17 @@ body.page-template-page-home {
   }
 }
 
-.page-number-4,
+.page-number-4 .wg-page-title-bar {
+     background-image: url("../img/title-bg-04.png");
+     background-color: $COLOR2
+}
+.page-number-5 .wh-page-title-bar {
+  background-image: url("../img/title-bg-04.png");
+  background-color: #bfbfbf;
+}
+
+.page-numer-4,
 .page-number-5 {
-  .wh-page-title-bar {
-    background-image: url("../img/title-bg-04.png");
-    background-color: $COLOR2;
-  }
   a.vc_btn3 {
     background-color: $BUTTON !important;
     text-transform: uppercase;
