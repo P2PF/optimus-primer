@@ -24,6 +24,7 @@ get_header();
                     'post_type' => 'page',
                     'orderby' => 'menu_order',
                     'order' => 'ASC',
+                    'nopaging' => true,
                 );
 
                 $child_query = new WP_Query($args);
