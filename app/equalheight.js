@@ -1,6 +1,6 @@
 /* https://css-tricks.com/equal-height-blocks-in-rows/
  */
-function equalheight(container) {
+exports.equalheight=function equalheight(container) {
     var currentTallest = 0,
         currentRowStart = 0,
         rowDivs = new Array(),
@@ -10,14 +10,14 @@ function equalheight(container) {
 
         $el = jQuery(this);
         jQuery($el).height('auto')
-        topPostion = $el.position().top;
+        topPosition = $el.position().top;
 
-        if (currentRowStart != topPostion) {
-            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+        if (currentRowStart != topPosition) {
+            for (var currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
                 rowDivs[currentDiv].height(currentTallest);
             }
             rowDivs.length = 0; // empty the array
-            currentRowStart = topPostion;
+            currentRowStart = topPosition;
             currentTallest = $el.height();
             rowDivs.push($el);
         } else {
@@ -28,4 +28,4 @@ function equalheight(container) {
             rowDivs[currentDiv].height(currentTallest);
         }
     });
-}
+};

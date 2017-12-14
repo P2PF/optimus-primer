@@ -62,6 +62,34 @@ function number_body_class($classes) {
     return array_merge($classes, $add);
 }
 
+/*
+ * Get prev/next posts by menu order
+ * https://1fix.io/blog/2014/09/09/get-right-previous_post_link-when-order-posts-by-menu_order/
+ */
+
+function my_previous_post_where() {
+    global $post, $wpdb;
+    return $wpdb->prepare( "WHERE p.menu_order < %s AND p.post_type = %s AND p.post_status = 'publish'", $post->menu_order, $post->post_type);
+}
+add_filter( 'get_previous_post_where', 'my_previous_post_where' );
+
+function my_next_post_where() {
+    global $post, $wpdb;
+    return $wpdb->prepare( "WHERE p.menu_order > %s AND p.post_type = %s AND p.post_status = 'publish'", $post->menu_order, $post->post_type);
+}
+add_filter( 'get_next_post_where', 'my_next_post_where' );
+
+function my_previous_post_sort() {
+    return "ORDER BY p.menu_order desc LIMIT 1";
+}
+add_filter( 'get_previous_post_sort', 'my_previous_post_sort' );
+
+function my_next_post_sort() {
+    return "ORDER BY p.menu_order asc LIMIT 1";
+}
+add_filter( 'get_next_post_sort', 'my_next_post_sort' );
+
+
 /* ============================================================================================================================================= */
 
 

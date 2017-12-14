@@ -21,7 +21,7 @@ $current_post = get_post();
         $next_post = get_previous_post();
         if (!empty($next_post)): ?>
             <a href="<?php echo get_permalink($next_post->ID); ?>">
-                <div class="prev">
+                <div class="prev equalheight">
                     <h2><?php echo $next_post->post_parent == $current_post->post_parent ? "Previous case study" : "Previous section" ?></h2>
                     <?php echo $next_post->post_title; ?>
                 </div>
@@ -31,7 +31,7 @@ $current_post = get_post();
         $next_post = get_next_post();
         if (!empty($next_post)): ?>
             <a href="<?php echo get_permalink($next_post->ID); ?>">
-                <div class="next">
+                <div class="next equalheight">
                     <h2><?php echo $next_post->post_parent == $current_post->post_parent ? "Next case study" : "Next section" ?></h2>
                     <?php echo $next_post->post_title; ?>
                 </div>
