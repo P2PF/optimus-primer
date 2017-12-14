@@ -919,7 +919,7 @@ body.page-template-page-home {
     }
   }
   .entry-content.wh-padding {
-    p, ul {
+    p, ul, blockquote, h3, h4 {
       padding-left: 12%;
       padding-right: 12%;
       @include mobile {
