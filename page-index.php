@@ -40,11 +40,6 @@ get_header();
                                 }
                                 ?>
                                 <h2><?php the_title(); ?></h2>
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="grid-block-hover">
-                                        <span class="btn">Read more</span>
-                                    </div>
-                                </a>
                             </div>
                         </a>
                     </div>
