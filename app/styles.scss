@@ -690,6 +690,24 @@ body.page-template-page-home {
     background-image: url("../img/title-bg-04.png");
     background-color: $COLOR2;
   }
+  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item > span {
+    color: #fff;
+    background-color: $BUTTON;
+    padding: 14px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
+  }
+  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item > span:hover {
+    color: #fff;
+    background-color: $BUTTON_HOVER;
+  }
+  .vc_grid-filter.vc_grid-filter-bordered-rounded-less>.vc_grid-filter-item, 
+  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item.vc_active, 
+  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item:hover  {
+    border: 0px;
+    background-color: transparent;
+  }
 }
 
 .page-number-5 {
