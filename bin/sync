@@ -1,3 +1,3 @@
 #!/bin/bash
 bin/pack
-rsync -azPc tmp/optimus-primer/ root@p2pfc:/opt/hosting/servers/php/primer.commonstransition.org/htdocs/wp-content/themes/optimus-primer/
+rsync -azPc tmp/optimus-primer/ p2pfc:/opt/hosting/servers/php/primer.commonstransition.org/htdocs/wp-content/themes/optimus-primer/
