@@ -1,3 +1,5 @@
 #!/bin/bash
 bin/pack
-rsync -azPc tmp/optimus-primer/ p2pfc:/opt/hosting/servers/php/primer.commonstransition.org/htdocs/wp-content/themes/optimus-primer/
+chmod 755 tmp/optimus-primer/
+chmod -R g+w tmp/optimus-primer/
+rsync -azPc --no-owner --no-group tmp/optimus-primer/ p2pfc:/opt/hosting/servers/php/primer.commonstransition.org/htdocs/wp-content/themes/optimus-primer/
