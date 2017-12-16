@@ -767,6 +767,7 @@ body.page-template-page-home {
     h2 {
       font-family: "Noticia Text";
       font-size: 36px;
+      font-weight: normal;
       margin-bottom: 12px;
       border: none;
       .number {
@@ -785,10 +786,10 @@ body.page-template-page-home {
       font-weight: bold;
       line-height: 35px;
       a {
-        color: #DD6C2E;
+        color: $BUTTON;
       }
       a:hover {
-        color: $COLOR1_1;
+        color: $BUTTON_HOVER;
         text-decoration: underline;
       }
     }

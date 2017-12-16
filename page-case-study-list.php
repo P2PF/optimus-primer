@@ -31,10 +31,7 @@ get_header();
                 ?>
                 <?php while ($child_query->have_posts()) : $child_query->the_post(); ?>
                         <div class="page-entry">
-                            <a href="<?php the_permalink(); ?>" rel="bookmark"
-                               title="<?php the_title_attribute(); ?>" class="">
-                                <h2><?php the_title() ?></h2>
-                            </a>
+                            <h2><?php the_title() ?></h2>
                             <div class="link">
                                 <a href="<?php the_permalink(); ?>" rel="bookmark"
                                    title="<?php the_title_attribute(); ?>" class="">
