@@ -3,7 +3,7 @@
  * @package WordPress
  * @subpackage Wheels
  *
- * Template Name: Home page (Full Width No Content)
+ * Template Name: Home page B (Full Width No Content)
  */
 get_header();
 function first_word($str) {
