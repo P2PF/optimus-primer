@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="959px" height="588px" viewBox="0 0 959 588" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>home-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home_verde" transform="translate(-80.000000, -113.000000)">
+            <g id="home-logo" transform="translate(79.000000, 118.109375)">
+                <g id="Group-3" transform="translate(0.000000, 140.016745)" line-spacing="109" fill="#FFFFFF">
+                    <text id="Commons-Transition-a" font-family="Roboto-Black, Roboto" font-size="110" font-weight="700" letter-spacing="-0.840277791">
+                        <tspan x="0" y="102.080785">Commons</tspan>
+                        <tspan x="0" y="211.080785">Transition and P2P:</tspan>
+                    </text>
+                    <text id="a-primer" font-family="Roboto-Light, Roboto" font-size="100" font-weight="300" letter-spacing="-0.763888896">
+                        <tspan x="72.6206877" y="311.27684">a primer</tspan>
+                    </text>
+                </g>
+                <g id="Page-1" transform="translate(45.647289, 0.263355)" stroke-width="10" stroke="#FFFFFF">
+                    <g id="Group-9" transform="translate(0.558113, 0.496640)">
+                        <polyline id="Stroke-3" points="0.601546003 129.096875 0.601546003 0.0666646664 663.6949 0.0666646664 663.6949 226.183494"></polyline>
+                        <polyline id="Stroke-5" points="663.69472 385.099653 663.69472 576.376166 0.601366061 576.376166 0.601366061 388.925219"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
