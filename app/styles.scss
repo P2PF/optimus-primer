@@ -221,8 +221,14 @@ body.page-template-page-home {
     }
     img#logo {
       margin: 8% 0 0 5%;
-      max-width: 80%;
-      max-height: 70%;
+      @media screen and (max-width: 768px){
+        max-width: 65%;
+	max-height: 40%;
+      }
+      @media screen and (min-width:769px){
+        max-width: 80%;
+        max-height: 70%;
+      }
       position: absolute;
       z-index: 101;
       @include desktop {
