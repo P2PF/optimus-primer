@@ -14,7 +14,7 @@ function first_word($str) {
 $img = get_stylesheet_directory_uri() . '/public/img';
 ?>
 <div id="front" class="pretty">
-    <img id="logo" src="<?php echo $img ?>/home-logo.png">
+    <img id="logo" src="<?php echo $img ?>/home-logo2.png">
     <img id="tree" src="<?php echo $img ?>/home-bg.png">
     <div id="welcome">
         <img id="text" src="<?php echo $img ?>/home-welcome.png" class="">
