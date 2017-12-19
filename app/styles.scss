@@ -528,12 +528,12 @@ body.page-template-page-home {
       font-weight: bold;
       line-height: 80px;
       @include mobile {
-        font-size: 96px;
-        line-height: 96px;
+        font-size: 72px;
+        line-height: 72px;
       }
       @include tablet {
-        font-size: 128px;
-        line-height: 128px;
+        font-size: 96px;
+        line-height: 96px;
       }
     }
   }
