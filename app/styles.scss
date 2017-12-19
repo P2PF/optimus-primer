@@ -352,13 +352,13 @@ body.page-template-page-home {
         font-size: 1.5em;
         line-height: 1.75em;
         text-align: center;
-        padding: 3em 2em 2em 2em;
+        padding: 2em;
         @include mobile {
           font-size: 1.3em;
           padding: 1em;
         }
         @include tablet {
-          padding: 1em;
+          padding: 2em 1em 1em 1em;
         }
 
         .btn {
