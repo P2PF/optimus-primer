@@ -709,7 +709,7 @@ body.page-template-page-home {
     background-image: url("../img/title-bg-04.png");
     background-color: $COLOR2;
   }
-  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item > span {
+  .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item > span {
     color: #fff;
     background-color: $BUTTON;
     padding: 14px 20px;
@@ -717,13 +717,13 @@ body.page-template-page-home {
     text-transform: uppercase;
     border-radius: 5px;
   }
-  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item > span:hover {
+  .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item > span:hover {
     color: #fff;
     background-color: $BUTTON_HOVER;
   }
-  .vc_grid-filter.vc_grid-filter-bordered-rounded-less>.vc_grid-filter-item, 
-  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item.vc_active, 
-  .vc_grid-filter.vc_grid-filter-color-grey>.vc_grid-filter-item:hover  {
+  .vc_grid-filter.vc_grid-filter-bordered-rounded-less > .vc_grid-filter-item,
+  .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item.vc_active,
+  .vc_grid-filter.vc_grid-filter-color-grey > .vc_grid-filter-item:hover {
     border: 0px;
     background-color: transparent;
   }
@@ -819,7 +819,7 @@ body.page-template-page-home {
 }
 
 .page-template-template-casestudy {
-  .vc_row p{
+  .vc_row p {
     margin-bottom: 1.8em;
   }
   .wh-page-title-bar {
@@ -1246,14 +1246,17 @@ ul#menu-side-burguer {
   top: 27px;
   text-shadow: 1px 1px 2px #ffffff;
   font-size: 10px;
+  background: transparent;
+  a {
+    font-family: "FontAwesome";
+    font-size: 22px;
+    font-weight: normal;
     background: transparent;
-    a {
-      font-family: "FontAwesome";
-      font-size: 22px;
-      font-weight: normal;
-      background: transparent;
-    }
-
+  }
+  .fa-stack {
+    margin-top: -4px;
+    font-size: 14px;
+  }
 }
 
 #scrollUp {
