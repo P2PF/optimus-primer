@@ -1239,6 +1239,23 @@ ul#menu-side-burguer {
   }
 }
 
+#wp-info {
+  display: inline;
+  position: absolute;
+  right: 122px;
+  top: 27px;
+  text-shadow: 1px 1px 2px #ffffff;
+  font-size: 10px;
+    background: transparent;
+    a {
+      font-family: "FontAwesome";
+      font-size: 22px;
+      font-weight: normal;
+      background: transparent;
+    }
+
+}
+
 #scrollUp {
   font-size: 48px;
   line-height: 48px;
